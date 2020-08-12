@@ -254,6 +254,7 @@ header {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
+        max-height: 300vh;
 
         li {
             flex: 1 0 auto;
@@ -263,6 +264,13 @@ header {
             text-align: center;
             position: relative;
             overflow: hidden;
+            max-width: 30%;
+
+            img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
 
             .overlay {
                 background: $color-pink;
@@ -275,6 +283,7 @@ header {
                 justify-content: center;
                 align-items: center;
                 transition: ease all 0.3s;
+                top: 0;
 
                 .work-info {
                     line-height: normal;
@@ -284,6 +293,12 @@ header {
                         border-bottom: 1px solid $color-white;
                         padding: 10px;
                         margin: 0 auto;
+                        text-transform: uppercase;
+                    }
+                    p {
+                        padding: 10px;
+                        margin: 0 auto;
+                        text-transform: capitalize;
                     }
                 }
             }
@@ -294,14 +309,6 @@ header {
         li:hover .overlay {
             left: 0% !important;
 
-        }
-
-        @for $i from 1 through 36 {
-            li:nth-child(#{$i}) {
-                $h: (random(400) + 100) + px;
-                height: $h;
-                line-height: $h;
-            }
         }
     }
 
@@ -345,6 +352,7 @@ footer {
     .copy {
         font-size: 11px;
         letter-spacing: 2px;
+
         .pink-text {
             color: $color-pink;
         }

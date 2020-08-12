@@ -297,6 +297,7 @@ header nav.main ul li:last-child:before {
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  max-height: 300vh;
 }
 
 .portfolio .masonry-with-columns li {
@@ -309,6 +310,13 @@ header nav.main ul li:last-child:before {
   text-align: center;
   position: relative;
   overflow: hidden;
+  max-width: 30%;
+}
+
+.portfolio .masonry-with-columns li img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .portfolio .masonry-with-columns li .overlay {
@@ -329,6 +337,7 @@ header nav.main ul li:last-child:before {
           align-items: center;
   -webkit-transition: ease all 0.3s;
   transition: ease all 0.3s;
+  top: 0;
 }
 
 .portfolio .masonry-with-columns li .overlay .work-info {
@@ -340,190 +349,17 @@ header nav.main ul li:last-child:before {
   border-bottom: 1px solid #fff;
   padding: 10px;
   margin: 0 auto;
+  text-transform: uppercase;
+}
+
+.portfolio .masonry-with-columns li .overlay .work-info p {
+  padding: 10px;
+  margin: 0 auto;
+  text-transform: capitalize;
 }
 
 .portfolio .masonry-with-columns li:hover .overlay {
   left: 0% !important;
-}
-
-.portfolio .masonry-with-columns li:nth-child(1) {
-  height: 306px;
-  line-height: 306px;
-}
-
-.portfolio .masonry-with-columns li:nth-child(2) {
-  height: 319px;
-  line-height: 319px;
-}
-
-.portfolio .masonry-with-columns li:nth-child(3) {
-  height: 122px;
-  line-height: 122px;
-}
-
-.portfolio .masonry-with-columns li:nth-child(4) {
-  height: 118px;
-  line-height: 118px;
-}
-
-.portfolio .masonry-with-columns li:nth-child(5) {
-  height: 268px;
-  line-height: 268px;
-}
-
-.portfolio .masonry-with-columns li:nth-child(6) {
-  height: 448px;
-  line-height: 448px;
-}
-
-.portfolio .masonry-with-columns li:nth-child(7) {
-  height: 111px;
-  line-height: 111px;
-}
-
-.portfolio .masonry-with-columns li:nth-child(8) {
-  height: 453px;
-  line-height: 453px;
-}
-
-.portfolio .masonry-with-columns li:nth-child(9) {
-  height: 387px;
-  line-height: 387px;
-}
-
-.portfolio .masonry-with-columns li:nth-child(10) {
-  height: 414px;
-  line-height: 414px;
-}
-
-.portfolio .masonry-with-columns li:nth-child(11) {
-  height: 306px;
-  line-height: 306px;
-}
-
-.portfolio .masonry-with-columns li:nth-child(12) {
-  height: 119px;
-  line-height: 119px;
-}
-
-.portfolio .masonry-with-columns li:nth-child(13) {
-  height: 461px;
-  line-height: 461px;
-}
-
-.portfolio .masonry-with-columns li:nth-child(14) {
-  height: 198px;
-  line-height: 198px;
-}
-
-.portfolio .masonry-with-columns li:nth-child(15) {
-  height: 313px;
-  line-height: 313px;
-}
-
-.portfolio .masonry-with-columns li:nth-child(16) {
-  height: 461px;
-  line-height: 461px;
-}
-
-.portfolio .masonry-with-columns li:nth-child(17) {
-  height: 189px;
-  line-height: 189px;
-}
-
-.portfolio .masonry-with-columns li:nth-child(18) {
-  height: 149px;
-  line-height: 149px;
-}
-
-.portfolio .masonry-with-columns li:nth-child(19) {
-  height: 330px;
-  line-height: 330px;
-}
-
-.portfolio .masonry-with-columns li:nth-child(20) {
-  height: 208px;
-  line-height: 208px;
-}
-
-.portfolio .masonry-with-columns li:nth-child(21) {
-  height: 359px;
-  line-height: 359px;
-}
-
-.portfolio .masonry-with-columns li:nth-child(22) {
-  height: 259px;
-  line-height: 259px;
-}
-
-.portfolio .masonry-with-columns li:nth-child(23) {
-  height: 254px;
-  line-height: 254px;
-}
-
-.portfolio .masonry-with-columns li:nth-child(24) {
-  height: 232px;
-  line-height: 232px;
-}
-
-.portfolio .masonry-with-columns li:nth-child(25) {
-  height: 142px;
-  line-height: 142px;
-}
-
-.portfolio .masonry-with-columns li:nth-child(26) {
-  height: 149px;
-  line-height: 149px;
-}
-
-.portfolio .masonry-with-columns li:nth-child(27) {
-  height: 387px;
-  line-height: 387px;
-}
-
-.portfolio .masonry-with-columns li:nth-child(28) {
-  height: 306px;
-  line-height: 306px;
-}
-
-.portfolio .masonry-with-columns li:nth-child(29) {
-  height: 380px;
-  line-height: 380px;
-}
-
-.portfolio .masonry-with-columns li:nth-child(30) {
-  height: 164px;
-  line-height: 164px;
-}
-
-.portfolio .masonry-with-columns li:nth-child(31) {
-  height: 373px;
-  line-height: 373px;
-}
-
-.portfolio .masonry-with-columns li:nth-child(32) {
-  height: 137px;
-  line-height: 137px;
-}
-
-.portfolio .masonry-with-columns li:nth-child(33) {
-  height: 260px;
-  line-height: 260px;
-}
-
-.portfolio .masonry-with-columns li:nth-child(34) {
-  height: 263px;
-  line-height: 263px;
-}
-
-.portfolio .masonry-with-columns li:nth-child(35) {
-  height: 239px;
-  line-height: 239px;
-}
-
-.portfolio .masonry-with-columns li:nth-child(36) {
-  height: 402px;
-  line-height: 402px;
 }
 
 .portfolio .pink {

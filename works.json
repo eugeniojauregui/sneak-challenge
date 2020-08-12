@@ -1,0 +1,67 @@
+{
+    "works": [{
+        "title": "Creative Logo",
+        "category": "branding",
+        "image": "img/works/logo1.jpg"
+    }, {
+        "title": "Creative Web",
+        "category": "web",
+        "image": "img/works/web1.jpg"
+    }, {
+        "title": "Creative Photo",
+        "category": "photography",
+        "image": "img/works/photo1.jpg"
+    }, {
+        "title": "Creative App",
+        "category": "app",
+        "image": "img/works/app1.jpg"
+    }, {
+        "title": "Creative Logo",
+        "category": "branding",
+        "image": "img/works/logo2.jpg"
+    }, {
+        "title": "Creative Web",
+        "category": "web",
+        "image": "img/works/web2.jpg"
+    }, {
+        "title": "Creative Photo",
+        "category": "photography",
+        "image": "img/works/photo2.jpg"
+    }, {
+        "title": "Creative App",
+        "category": "app",
+        "image": "img/works/app2.jpg"
+    }, {
+        "title": "Creative Logo",
+        "category": "branding",
+        "image": "img/works/logo3.jpg"
+    }, {
+        "title": "Creative Web",
+        "category": "web",
+        "image": "img/works/web3.jpg"
+    }, {
+        "title": "Creative Photo",
+        "category": "photography",
+        "image": "img/works/photo3.jpg"
+    }, {
+        "title": "Creative App",
+        "category": "app",
+        "image": "img/works/app3.jpg"
+    }, {
+        "title": "Creative Logo",
+        "category": "branding",
+        "image": "img/works/logo4.jpg"
+    }, {
+        "title": "Creative Web",
+        "category": "web",
+        "image": "img/works/web4.jpg"
+    }, {
+        "title": "Creative Photo",
+        "category": "photography",
+        "image": "img/works/photo4.jpg"
+    }, {
+        "title": "Creative App",
+        "category": "app",
+        "image": "img/works/app4.jpg"
+    }]
+}
