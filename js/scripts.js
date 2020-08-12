@@ -30,14 +30,25 @@ for (let i = 0; i < myWorks.works.length; i++) {
   mainListNode.appendChild(liNode)
 }
 
-// Masonry
+//Cambio el layout de los trabajos
+let layout = document.querySelectorAll('.layout li')
 
-// const numCols = 3;
-// const colHeights = Array(numCols).fill(0);
-// const container = document.getElementById('masonry-with-columns');
-// Array.from(container.children).forEach((child, i) => {
-//   const order = i % numCols;
-//   child.style.order = order;
-//   colHeights[order] += parseFloat(child.clientHeight);
-// })
-// container.style.height = Math.max(...colHeights) + 'px';
+let masonry = document.getElementById('block')
+masonry.onclick = changeLayout
+let row = document.getElementById('row')
+row.onclick = changeLayout
+
+function changeLayout() {
+  [].forEach.call(layout, function (lay) {
+    lay.classList.remove("active");
+  });
+  if (mainListNode.classList.contains('row')) {
+    mainListNode.classList.remove('row')
+    masonry.classList.add('active')
+  } else {
+    mainListNode.classList.add('row')
+    row.classList.add('active')
+  }
+}
+
+

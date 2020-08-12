@@ -193,14 +193,19 @@ header {
             margin: 10px;
             cursor: pointer;
             transition: ease all 0.3s;
+
+            img {
+                max-width: 14px;
+            }
         }
 
         li:hover {
             transform: scale(1.2);
         }
 
-        li img {
-            max-width: 14px;
+        li.active {
+            opacity: 0.5;
+            transition: ease all 0.3s;
         }
     }
 
@@ -225,7 +230,8 @@ header {
                 cursor: pointer;
             }
 
-            li:hover {
+            li:hover,
+            li.active {
                 color: $color-white;
             }
 
@@ -242,7 +248,8 @@ header {
                 z-index: -1;
             }
 
-            li:hover:before {
+            li:hover:before,
+            li.active:before {
                 bottom: 0;
             }
 
@@ -265,6 +272,7 @@ header {
             position: relative;
             overflow: hidden;
             max-width: 30%;
+            transition: ease all 0.3s;
 
             img {
                 width: 100%;
@@ -295,6 +303,7 @@ header {
                         margin: 0 auto;
                         text-transform: uppercase;
                     }
+
                     p {
                         padding: 10px;
                         margin: 0 auto;
@@ -309,6 +318,32 @@ header {
         li:hover .overlay {
             left: 0% !important;
 
+        }
+    }
+
+    .row {
+        display: block;
+
+        li {
+            display: flex;
+            max-width: 100%;
+            max-height: 150px;
+            align-items: center;
+
+            img {
+                max-width: 150px;
+                width: auto;
+            }
+
+            .overlay {
+                left: auto;
+                right: 0;
+                width: 85%;
+            }
+        }
+
+        li:hover .overlay {
+            left: auto !important;
         }
     }
 
