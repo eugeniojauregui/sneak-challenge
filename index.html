@@ -9,10 +9,11 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="description" content="">
+    <title>Sneak</title>
+    <meta name="description" content="Creative Portfolio">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,400&family=Questrial&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -48,7 +49,7 @@
                     App
                 </li>
                 <li>
-                    <input type="text" name="search" id="search" /> <img src="img/Search_Icon.svg" alt="Search Icon" />
+                    <input type="text" name="search" id="search" placeholder="Search works" /> <img src="img/Search_Icon.svg" alt="Search Icon" class="search-icon" />
                 </li>
             </ul>
         </nav>
@@ -56,7 +57,7 @@
     <section class="hero">
         <div class="hero-content">
             <h2>EXPLORE BEYOND HORIZON</h2>
-            <p>Magna mundi referrentur quo, no rebum dignissim qui.
+            <p>Magna mundi referrentur quo, no rebum dignissim qui.<br/>
                 Per quodsi accusata id, agam labores.</p>
             <div class="btn white">VIEW OUR WORK</div>
         </div>
@@ -89,7 +90,7 @@
                 </li>
             </ul>
         </nav>
-        <ul class="works">
+        <ul class="works masonry-with-columns" id="masonry-with-columns">
             <li data-cat="branding">
                 <div class="overlay">
                     <div class="work-info">
@@ -167,7 +168,7 @@
     </section>
     <footer>
         <div class="content">
-            <div class="copy">© 2016 - Sneak All Right Reserved</div>
+            <div class="copy">© 2016 - <span class="pink-text">Sneak</span> All Right Reserved</div>
             <ul class="social">
                 <li><a href="#"><img src="img/Facebook.svg" alt="Facebook"/></a></li>
                 <li><a href="#"><img src="img/Twitter.svg" alt="Twitter"/></a></li>
@@ -177,7 +178,7 @@
             </ul>
         </div>
     </footer>
-    <script src="" async defer></script>
+    <script src="js/scripts.js" async defer></script>
 </body>
 
 </html>
