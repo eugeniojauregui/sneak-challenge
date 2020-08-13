@@ -1,3 +1,19 @@
+//Campo búsqueda 
+let search_btn = document.getElementById('search-btn')
+search_btn.onclick = showSearch
+let searchfield = document.getElementById('searchfield')
+
+function showSearch() {
+  
+  if (searchfield.classList.contains('show')) {
+    searchfield.classList.remove('show')
+    console.log('no search')
+  } else {
+    searchfield.classList.add('show')
+    console.log('search')
+  }
+}
+
 // Datos iniciales
 let works = '{  "works": [{      "title": "Creative Logo",      "category": "branding",      "image": "img/works/logo1.jpg"  }, {      "title": "Creative Web",      "category": "web",      "image": "img/works/web1.jpg"  }, {      "title": "Creative Photo",      "category": "photography",      "image": "img/works/photo1.jpg"  }, {      "title": "Creative App",      "category": "app",      "image": "img/works/app1.jpg"  }, {      "title": "Creative Logo",      "category": "branding",      "image": "img/works/logo2.jpg"  }, {      "title": "Creative Web",      "category": "web",      "image": "img/works/web2.jpg"  }, {      "title": "Creative Photo",      "category": "photography",      "image": "img/works/photo2.jpg"  }, {      "title": "Creative App",      "category": "app",      "image": "img/works/app2.jpg"  }, {      "title": "Creative Logo",      "category": "branding",      "image": "img/works/logo3.jpg"  }, {      "title": "Creative Web",      "category": "web",      "image": "img/works/web3.jpg"  }, {      "title": "Creative Photo",      "category": "photography",      "image": "img/works/photo3.jpg"  }, {      "title": "Creative App",      "category": "app",      "image": "img/works/app3.jpg"  }]}';
 var myWorks = JSON.parse(works);

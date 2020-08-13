@@ -8,6 +8,7 @@ $color-gray: #707070;
 $color-gray-light: #c3d0d8;
 
 html {
+    scroll-behavior: smooth;
     body {
         margin: 0;
         padding: 0;
@@ -20,6 +21,10 @@ html {
         list-style: none;
         padding: 0;
         margin: 0;
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
     }
 }
 
@@ -123,6 +128,7 @@ header {
                 justify-content: flex-end;
                 align-items: center;
                 max-width: 21px;
+                width: auto;
                 padding: 10px 0;
 
                 input#search {
@@ -141,7 +147,11 @@ header {
                     margin-left: 10px;
                 }
             }
-
+            li.show {
+                max-width: none;
+                width: fit-content;
+                transition: ease all 0.3s;
+            }
             li:last-child:before {
                 content: none;
             }
