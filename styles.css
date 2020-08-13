@@ -43,6 +43,7 @@ header {
   width: 94%;
   margin: auto;
   height: 100px;
+  position: relative;
 }
 
 header .brand {
@@ -167,6 +168,12 @@ header nav.main ul li:last-child:before {
   content: none;
 }
 
+header .hamburger {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
 .hero {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -224,6 +231,7 @@ header nav.main ul li:last-child:before {
   cursor: pointer;
   -webkit-transition: ease all 0.3s;
   transition: ease all 0.3s;
+  opacity: .5;
 }
 
 .portfolio .layout li img {
@@ -236,7 +244,7 @@ header nav.main ul li:last-child:before {
 }
 
 .portfolio .layout li.active {
-  opacity: 0.5;
+  opacity: 1;
   -webkit-transition: ease all 0.3s;
   transition: ease all 0.3s;
 }
@@ -296,16 +304,8 @@ header nav.main ul li:last-child:before {
 }
 
 .portfolio .masonry-with-columns {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  max-height: 300vh;
+  -webkit-columns: 3;
+          columns: 3;
 }
 
 .portfolio .masonry-with-columns li {
@@ -318,9 +318,12 @@ header nav.main ul li:last-child:before {
   text-align: center;
   position: relative;
   overflow: hidden;
-  max-width: 30%;
+  max-width: 100%;
   -webkit-transition: ease all 0.3s;
   transition: ease all 0.3s;
+  height: auto;
+  -webkit-column-break-inside: avoid;
+          break-inside: avoid-column;
 }
 
 .portfolio .masonry-with-columns li img {
@@ -374,6 +377,8 @@ header nav.main ul li:last-child:before {
 
 .portfolio .row {
   display: block;
+  -webkit-columns: 1;
+          columns: 1;
 }
 
 .portfolio .row li {
@@ -459,5 +464,113 @@ footer .copy {
 
 footer .copy .pink-text {
   color: #fc758c;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+@media only screen and (max-width: 720px) {
+  header .brand {
+    width: 50%;
+  }
+  header .hamburger {
+    visibility: visible;
+    width: 24px;
+    height: 4px;
+    border-radius: 3px;
+    background: #fc758c;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    -webkit-transition: ease all 0.3s;
+    transition: ease all 0.3s;
+  }
+  header .hamburger:before {
+    content: '';
+    width: 24px;
+    height: 4px;
+    border-radius: 3px;
+    background: #fc758c;
+    display: block;
+    position: relative;
+    top: -9px;
+    -webkit-transition: ease all 0.3s;
+    transition: ease all 0.3s;
+  }
+  header .hamburger:after {
+    content: '';
+    width: 24px;
+    height: 4px;
+    border-radius: 3px;
+    background: #fc758c;
+    display: block;
+    position: relative;
+    top: 5px;
+    -webkit-transition: ease all 0.3s;
+    transition: ease all 0.3s;
+  }
+  header .hamburger.cross {
+    background: transparent;
+  }
+  header .hamburger.cross:before {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    top: 0px;
+  }
+  header .hamburger.cross:after {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    top: -4px;
+  }
+  header nav.main {
+    position: absolute;
+    width: 100%;
+    background: #fff;
+    left: -110%;
+    -webkit-transition: ease all 0.3s;
+    transition: ease all 0.3s;
+    top: 110px;
+  }
+  header nav.main ul {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  header nav.main ul li {
+    width: 100%;
+    text-align: center;
+  }
+  header nav.main ul li:last-child {
+    max-width: 50%;
+  }
+  header nav.main.deploy {
+    left: 0;
+  }
+  .hero {
+    min-height: 90vh;
+  }
+  .portfolio .masonry-with-columns {
+    -webkit-columns: 1;
+            columns: 1;
+  }
+  .portfolio .masonry-with-columns li {
+    margin-right: 0;
+  }
+  .portfolio .row li .overlay {
+    width: 46%;
+  }
+  .portfolio nav.work-category {
+    width: 100%;
+  }
+  .portfolio nav.work-category ul {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

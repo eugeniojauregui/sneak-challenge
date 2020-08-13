@@ -29,10 +29,10 @@
                 <h2>CREATIVE PORTOFLIO</h2>
             </div>
         </div>
-        <div class="hamburger">
+        <div class="hamburger" id="hamburger">
 
         </div>
-        <nav class="main">
+        <nav class="main" id="menu">
             <ul>
                 <li class="active" id="all">
                     All
@@ -75,19 +75,19 @@
         </ul>
         <nav class="work-category">
             <ul>
-                <li class="active" id="all">
+                <li class="category active" id="all" onclick="showCategory(this.id)">
                     All
                 </li>
-                <li id="branding">
+                <li class="category" id="branding" onclick="showCategory(this.id)">
                     Branding
                 </li>
-                <li id="web">
+                <li class="category" id="web" onclick="showCategory(this.id)">
                     Web
                 </li>
-                <li id="photography">
+                <li class="category" id="photography" onclick="showCategory(this.id)">
                     Photography
                 </li>
-                <li id="app">
+                <li class="category" id="app" onclick="showCategory(this.id)">
                     App
                 </li>
             </ul>
@@ -109,6 +109,7 @@
             </ul>
         </div>
     </footer>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
     <script src="js/scripts.js" async defer></script>
 </body>
 

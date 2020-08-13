@@ -15,16 +15,13 @@ for (let i = 0; i < myWorks.works.length; i++) {
   // Creo el nodo li
   liNode = document.createElement('li')
 
-  // Le agrego su texto interno
+  // Le agrego su contenido interno
   liNode.innerHTML = '<img src="' + work.image + '" alt="' + work.title + '"/>';
   liNode.innerHTML += '<div class="overlay"><div class="work-info"><h3>' + work.title + '</h3><p>' + work.category + '</p></div></div>';
 
-  // Le setteo la clase 'list-group-item'
-  liNode.className = 'list-group-item'
-
-  // Le setteo la clase 'list-group-item'
+  // Le setteo la clase segun categoria
   let cat = work.category
-  liNode.setAttribute('data-cat', cat)
+  liNode.className = cat
 
   // Agrego el nodo al final de la lista
   mainListNode.appendChild(liNode)
@@ -37,7 +34,7 @@ let masonry = document.getElementById('block')
 masonry.onclick = changeLayout
 let row = document.getElementById('row')
 row.onclick = changeLayout
-
+//Cambio el layout según selección
 function changeLayout() {
   [].forEach.call(layout, function (lay) {
     lay.classList.remove("active");
@@ -51,4 +48,32 @@ function changeLayout() {
   }
 }
 
+//Selecciono la categoría a mostrar
 
+function showCategory(cat) {
+  let workscat = document.querySelectorAll('.works li')
+
+  workscat.forEach(element => {
+    element.classList.add('hidden')
+    if (element.classList.contains(cat)) {
+      element.classList.remove('hidden')
+      element.classList.add('visible')
+    }
+  });
+};
+
+//Funcionamiento menú mobile
+
+let hamburger = document.getElementById('hamburger')
+hamburger.onclick = deployMenu
+let menu = document.getElementById('menu')
+
+function deployMenu() {
+  if (menu.classList.contains('deploy')) {
+    menu.classList.remove('deploy')
+    hamburger.classList.remove('cross')
+  } else {
+    menu.classList.add('deploy')
+    hamburger.classList.add('cross')
+  }
+}
